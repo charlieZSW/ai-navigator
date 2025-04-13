@@ -1,0 +1,38 @@
+{
+  "name": "ai-nav",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "check-links": "node scripts/runLinkChecker.js",
+    "suggest-alternatives": "node scripts/runSuggestAlternatives.js",
+    "update-links": "npm run check-links && npm run suggest-alternatives",
+    "scheduled-check": "node scripts/scheduledLinkCheck.js"
+  },
+  "dependencies": {
+    "@antv/g6": "^5.0.44",
+    "axios": "^1.8.4",
+    "next": "15.2.4",
+    "nodemailer": "^6.9.9",
+    "puppeteer": "^24.6.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-window": "^1.8.11",
+    "reactflow": "^11.11.4",
+    "swr": "^2.3.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/nodemailer": "^6.4.14",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/react-window": "^1.8.8",
+    "tailwindcss": "^4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  }
+}
