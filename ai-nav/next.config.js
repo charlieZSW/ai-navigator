@@ -4,17 +4,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  experimental: {
-    optimizeCss: false,
-    esmExternals: true,
-  },
-  webpack: (config, { isServer }) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      critters: false,
-    };
-    return config;
-  },
 };
 
 module.exports = nextConfig;
