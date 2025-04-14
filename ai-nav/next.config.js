@@ -5,9 +5,16 @@ const nextConfig = {
     unoptimized: true,
   },
   experimental: {
-    optimizeCss: false
+    optimizeCss: false,
+    esmExternals: true,
   },
-  // 移除 experimental.optimizeFonts 选项
+  webpack: (config, { isServer }) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      critters: false,
+    };
+    return config;
+  },
 };
 
 module.exports = nextConfig;
