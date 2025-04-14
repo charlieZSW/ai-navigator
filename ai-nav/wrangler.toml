@@ -1,0 +1,22 @@
+name = "ai-navigator"
+compatibility_date = "2023-10-30"
+compatibility_flags = ["nodejs_compat"]
+
+# 启用Next.js集成
+[build]
+command = "npm run build"
+
+# 指定构建输出目录
+[site]
+bucket = ".next"
+
+# 路由规则
+[env.production]
+NEXT_RUNTIME = "edge"
+
+[[routes]]
+pattern = "/*"
+zone_name = "ai-navigator.pages.dev"
+
+[build.upload]
+format = "service-worker" 
