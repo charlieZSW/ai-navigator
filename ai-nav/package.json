@@ -5,14 +5,15 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "pages:build": "npx @cloudflare/next-on-pages",
+    "pages:build": "npm install && npx @cloudflare/next-on-pages",
     "pages:deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static",
     "start": "next start",
     "lint": "next lint",
     "check-links": "node scripts/runLinkChecker.js",
     "suggest-alternatives": "node scripts/runSuggestAlternatives.js",
     "update-links": "npm run check-links && npm run suggest-alternatives",
-    "scheduled-check": "node scripts/scheduledLinkCheck.js"
+    "scheduled-check": "node scripts/scheduledLinkCheck.js",
+    "cf-pages:build": "npm install && npm run build && npm run pages:build"
   },
   "dependencies": {
     "@antv/g6": "^5.0.44",
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.8.0",
+    "wrangler": "^3.18.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.14",

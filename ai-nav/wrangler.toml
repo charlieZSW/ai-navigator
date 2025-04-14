@@ -7,8 +7,16 @@ compatibility_flags = ["nodejs_compat"]
 command = "npm run build"
 
 # 指定构建输出目录
+[build.output]
+path = ".vercel/output/static"
+
 [site]
-bucket = ".next"
+bucket = ".vercel/output/static"
+
+# Cloudflare Pages配置
+[pages]
+build_output_directory = ".vercel/output/static"
+compatibility_flags = ["nodejs_compat"]
 
 # 路由规则
 [env.production]

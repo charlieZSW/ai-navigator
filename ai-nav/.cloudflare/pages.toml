@@ -1,0 +1,8 @@
+# 配置Cloudflare Pages构建
+
+[build]
+command = "npm run cf-pages:build"
+output_directory = ".vercel/output/static"
+
+[build.environment]
+NODE_VERSION = "20.19.0" 
