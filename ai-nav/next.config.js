@@ -8,10 +8,6 @@ const nextConfig = {
     // 如果需要，也可以保留 unoptimized: true，根据你的实际需求决定
     // unoptimized: true,
   },
-  experimental: {
-    // 保持 .ts 中的配置
-    optimizeCss: true,
-  },
 };
 
 module.exports = nextConfig; 
