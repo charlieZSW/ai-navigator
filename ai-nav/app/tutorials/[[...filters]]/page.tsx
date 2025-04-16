@@ -19,6 +19,9 @@ import {
 import { migrateTutorialsData } from '../../utils/dataMigration';
 import LearningPathMap from '../../components/LearningPathMap';
 
+// Configure this page to use the Edge Runtime for Cloudflare Pages compatibility
+export const runtime = 'edge';
+
 // 统一的教程页面组件
 export default function TutorialsPage() {
   // 路由和参数相关钩子
